@@ -5,12 +5,14 @@ var api = {
 var searchbox = document.querySelector('.searchBox');
 if (searchbox){
 searchbox.addEventListener('keypress', setQuery);
+
 }
 
 function setQuery(evt){
     if (evt.keyCode == 13){
         getResults(searchbox.value);
         console.log(searchbox.value);
+        getLocation();
     }
 }
 
@@ -34,9 +36,6 @@ function displayResults(weather){
 
     let icon = document.querySelector('.icon');
     icon.innerHTML = "<img src=weatherIcons/"+weather.weather[0].icon +"@2x.png>";
-    //icon.innerHTML = '<img src='/weatherIcons/' ${weather.weather[0].icon} '.icon@2x.png>';
-    
-    //icon.innerHTML = (getIcon(weather.weather[0].icon));
 
     let temp = document.querySelector('.current .temp');
     temp.innerText = `${Math.round(weather.main.temp)}°c`;
@@ -48,10 +47,17 @@ function displayResults(weather){
     hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
 
 }
-/*
-function getIcon(iconId){
-    fetch('http://openweathermap.org/img/wn/'+ iconId +'@2x.png');
-}*/
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+  }
+  function showPosition(position) {
+ console.log(position.coords.latitude , position.coords.longitude);
+  }
 
 function dateBuilder (d) {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
