@@ -56,7 +56,12 @@ function getLocation() {
     }
   }
   function showPosition(position) {
+      var location = {
+          latitude : position.coords.latitude,
+          longitude : position.coords.longitude
+      }
  console.log(position.coords.latitude , position.coords.longitude);
+ console.log(location.latitude);
   }
 
 function dateBuilder (d) {
