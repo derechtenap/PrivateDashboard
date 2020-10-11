@@ -1,6 +1,8 @@
 var api = {
     key:"16097ceeccf43bca442735334506a958",
-    base:"https://api.openweathermap.org/data/2.5/"
+    base:"https://api.openweathermap.org/data/2.5/",
+    lat: "51.286473",
+    long: "7.679787"
 }
 var searchbox = document.querySelector('.searchBox');
 if (searchbox){
@@ -8,6 +10,7 @@ searchbox.addEventListener('keypress', setQuery);
 
 }
 
+/* Funktion falls man manuell Ort eingeben will bzw. über getLocation arbeiten will!
 function setQuery(evt){
     if (evt.keyCode == 13){
         getResults(searchbox.value);
@@ -15,19 +18,21 @@ function setQuery(evt){
         getLocation();
     }
 }
+*/
 
 function getResults(query){
-    fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+    fetch(`${api.base}onecall?lat=${api.lat}&lon=${api.long}&lang=de&units=metric&APPID=${api.key}`)
         .then (weather => {
             return weather.json();
         }).then (displayResults);
 }
 
+
 function displayResults(weather){
     
     console.log(weather);
     let city = document.querySelector('.location .city');
-    city.innerText = `${weather.name}, ${weather.sys.country}`;
+    city.innerText = `Altena, Deutschland`;
 
     let now = new Date();
     let date = document.querySelector('.location .date');
@@ -35,19 +40,26 @@ function displayResults(weather){
 
 
     let icon = document.querySelector('.icon');
-    icon.innerHTML = "<img src=weatherIcons/"+weather.weather[0].icon +"@2x.png>";
+    icon.innerHTML = "<img src=weatherIcons/"+weather.current.weather[0].icon +"@2x.png>";
 
-    let temp = document.querySelector('.current .temp');
-    temp.innerText = `${Math.round(weather.main.temp)}°c`;
+    let temp = document.querySelector(' .temp');
+    temp.innerText = `${Math.round(weather.current.temp)}°C`;
 
-    let weather_el = document.querySelector('.current .weather');
-    weather_el.innerText = weather.weather[0].main;
+    let weather_el = document.querySelector(' .weather');
+    weather_el.innerText = weather.current.weather[0].description;
+
+    let feels = document.querySelector('.feels');
+    feels.innerText = `${Math.round(weather.current.feels_like)} °C`;
 
     let hilow = document.querySelector('.hi-low');
-    hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
+    hilow.innerText = `${Math.round(weather.daily[0].temp.min)}°C / ${Math.round(weather.daily[0].temp.max)}°C`;
+
+    let hum = document.querySelector('.humidity');
+    hum.innerText = `${weather.current.humidity} %`;
 
 }
 
+/* Aktuellen Standort abfragen. Jedoch zu ungenau für optimalen Erfolg aktuell
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
@@ -64,6 +76,8 @@ function getLocation() {
  console.log(location.latitude);
   }
 
+*/
+
 function dateBuilder (d) {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -75,3 +89,11 @@ function dateBuilder (d) {
   
     return `${day} ${date} ${month} ${year}`;
   }
+
+
+
+/*
+  fetch(`${api.base}onecall?q=${query}&units=metric&APPID=${api.key}`)
+
+
+  */

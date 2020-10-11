@@ -6,27 +6,48 @@
     <title>Dashboard</title>
     <script src="weather.js"></script>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
    
 </head>
-<body>
+<body onload="getResults()">
     <div>
-        <header>
-            <input type="text" autocomplete="off" class="searchBox" placeholder="Search for a City">
-        </header>
+       
         <main>
             <section class="location">
-                <div class="city"> Altena, GER</div>
-                <div class="date"> Wednesday 30 September 2020</div>
+                <div class="city"></div>
+                <div class="date"></div>
             </section>
-            <div class="current">
-                <div class="icon"></div>
-                <div class="temp">15<span>°c</span></div>
-                <div class="weather">Sunny</div>
-                <div class="hi-low">13°c / 16°c</div>
-            </div>
-        </main>
+            
     </div>
+
+    <div class="container ">
+        <div class="row borderWeatherFull"  >
+          <div class="col icon innerBorderWeather"></div>
+          <div class="col innerBorderWeather">
+              <div class="col temp weatherFont"></div>
+              <div class="col weather weatherFontText" ></div>
+          </div>
+          <div class="col innerBorderWeather">
+            <div class="col weatherFontText">Gefühlt:</div>
+            <div class="col feels weatherFont"></div>
+          </div>
+          <div class="col innerBorderWeather">
+            <div class="col weatherFontText">Min/Max</div>
+            <div class="col hi-low weatherFont" style="font-size: 36px;"></div>
+          </div>
+          <div class="col">
+            <div class="col weatherFontText">Luftfeuchtigkeit</div>
+            <div class="col humidity weatherFont"></div>
+          </div>
+        </div>
+
+        <div class="row" style="border-style:solid; border-radius: 80px;">
+          <div class="col-8">col-8</div>
+          <div class="col-4">col-4</div>
+        </div>
+      </div>
     <script src="weather.js"></script>
 </body>
 </html>

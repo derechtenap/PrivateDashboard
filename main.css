@@ -1,0 +1,18 @@
+.borderWeatherFull {
+    border-style:solid; 
+    border-radius: 20px;
+}
+
+.innerBorderWeather {
+    border-right: solid;
+}
+
+.weatherFont {
+    font-size: 40px; 
+    text-align: center;
+}
+
+.weatherFontText {
+    text-align: center;
+    font-weight: bold;
+}
