@@ -57,6 +57,8 @@ function displayResults(weather){
     let hum = document.querySelector('.humidity');
     hum.innerText = `${weather.current.humidity} %`;
 
+    
+
 }
 
 /* Aktuellen Standort abfragen. Jedoch zu ungenau für optimalen Erfolg aktuell
@@ -91,6 +93,28 @@ function dateBuilder (d) {
   }
 
 
+  function timeConverter(UNIX_timestamp){
+    var a = new Date(UNIX_timestamp * 1000);
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var year = a.getFullYear();
+    var month = months[a.getMonth()];
+    var date = a.getDate();
+    var hour = a.getHours();
+    var min = a.getMinutes();
+    var sec = a.getSeconds();
+    //var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+    var time = date + ' ' + month + ' ' + year;
+    return time;
+  }
+  console.log(timeConverter(weather.daily[0].dt));
+
+
+
+  function weeklyForecast(){
+
+}
+
+let weekdays = ["Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag","Sonntag"];
 
 /*
   fetch(`${api.base}onecall?q=${query}&units=metric&APPID=${api.key}`)
