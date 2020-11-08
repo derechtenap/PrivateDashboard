@@ -31,14 +31,7 @@ function getResults(query){
 function displayResults(weather){
     
     console.log(weather);
-    /*let city = document.querySelector('.location .city');
-    city.innerText = `Altena, Deutschland`;
-
-    let now = new Date();
-    let date = document.querySelector('.location .date');
-    date.innerText = dateBuilder(now); */
-
-
+  
     let icon = document.querySelector('.icon');
     icon.innerHTML = "<img src=weatherIcons/"+weather.current.weather[0].icon +"@2x.png>";
 
@@ -58,7 +51,7 @@ function displayResults(weather){
     hum.innerText = `${weather.current.humidity} %`;
 
     console.log(timeConverter(weather.daily[1].dt));
-
+    console.log(unixToDay(weather.daily[0].dt));
 }
 
 /* Aktuellen Standort abfragen. Jedoch zu ungenau für optimalen Erfolg aktuell
@@ -79,32 +72,63 @@ function getLocation() {
   }
 
 */
-let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
   function timeConverter(UNIX_timestamp){
     var a = new Date(UNIX_timestamp * 1000);
     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     //let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    let day = days[a.getDay()];
+   // let day = days[a.getDay()];
     var year = a.getFullYear();
     var month = months[a.getMonth()];
     var date = a.getDate();
-    var hour = a.getHours();
-    var min = a.getMinutes();
-    var sec = a.getSeconds();
+    //var hour = a.getHours();
+    //var min = a.getMinutes();
+    //var sec = a.getSeconds();
     //var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
     var time = date + ' ' + month + ' ' + year;
+    return time;
+  }
+  
+  let weekdays = ["Mo.","Di.","Mi.","Do.","Fr.","Sa.","So."];
+
+  function unixToDay(UnixDay){
+    var b = new Date(UnixDay*1000);
+    var day = weekdays[b.getDay()];
+
     return day;
   }
-  //console.log(timeConverter(weather.daily[0].dt));
 
 
+  function weeklyForecast(weather){
+    for (let i = 1; i <= weather.daily.length; i++){
+      switch (unixToDay(weather.daily[i].dt)) {
+        case "Mo.":
+          
+          break;
+        case "Di.":
 
-  function weeklyForecast(){
+          break;
+        case "Mi.":
 
+          break;
+        case "Do.":
+
+          break;
+        case "Fr.":
+
+          break;  
+        case "Sa.":
+
+          break;
+        case "So.":
+
+          break;
+      
+      }
+     
+   }
 }
 
-let weekdays = ["Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag","Sonntag"];
+
 
 /*
   fetch(`${api.base}onecall?q=${query}&units=metric&APPID=${api.key}`)
