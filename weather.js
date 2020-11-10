@@ -19,43 +19,49 @@ function getResults(query) {
     .then(weather => {
       return weather.json();
     }).then(displayWeatherWidgetFull);
-    
+
+    fetch(`${api.base}weather?lat=${api.lat}&lon=${api.long}&lang=de&units=metric&APPID=${api.key}`)
+    .then(weatherCurrent => {
+      return weatherCurrent.json();
+    }).then(displayResults);
 
 }
 
 
 function displayWeatherWidgetFull(weather) {
-  displayResults(weather);
+  //displayResults(weather);
   dailyForecast(weather);
-  hourlyForecast(weather)
-}
-
-
-function displayResults(weather) {
+  hourlyForecast(weather);
 
   console.log(weather);
+}
+
+// Die Funktion muss mit dem Current Weather Apicall gemacht werden. Weiterer Fetch in getResults + Anpassung der Json ansteuerung
+function displayResults(weatherCurrent) {
+
+  console.log(weatherCurrent);
 
   let icon = document.querySelector('.icon');
-  icon.innerHTML = "<img src=weatherIcons/" + weather.current.weather[0].icon + "@2x.png>";
+  icon.innerHTML = "<img src=weatherIcons/" + weatherCurrent.weather[0].icon + "@2x.png>";
 
   let temp = document.querySelector(' .temp');
-  temp.innerText = `${Math.round(weather.current.temp)}°C`;
+  temp.innerText = `${Math.round(weatherCurrent.main.temp)}°C`;
 
   let weather_el = document.querySelector(' .weather');
-  weather_el.innerText = weather.current.weather[0].description;
+  weather_el.innerText = weatherCurrent.weather[0].description;
 
   let feels = document.querySelector('.feels');
-  feels.innerText = `${Math.round(weather.current.feels_like)} °C`;
+  feels.innerText = `${Math.round(weatherCurrent.main.feels_like)} °C`;
 
   let hilow = document.querySelector('.hi-low');
-  hilow.innerText = `${Math.round(weather.daily[0].temp.min)}°C / ${Math.round(weather.daily[0].temp.max)}°C`;
+  hilow.innerText = `${Math.round(weatherCurrent.main.temp_max)}°C / ${Math.round(weatherCurrent.main.temp_min)}°C`;
 
   let hum = document.querySelector('.humidity');
-  hum.innerText = `${weather.current.humidity} %`;
+  hum.innerText = `${weatherCurrent.main.humidity} %`;
 
-  console.log(timeConverter(weather.hourly[47].dt));
-  console.log(unixToDay(weather.daily[0].dt));
-  console.log(unixToHour(weather.daily[0].dt));
+  let windSpeed = document.querySelector('.windSpeed');
+  windSpeed.innerText = `${weatherCurrent.wind.speed} m/s`;
+
 }
 
 /* Aktuellen Standort abfragen. Jedoch zu ungenau für optimalen Erfolg aktuell
