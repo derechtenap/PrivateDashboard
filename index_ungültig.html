@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+   
+</head>
+<body onload="getResults()">
+    
+
+    <div class="container-fluid">
+      <div class="row py-5">
+          <div class="card col-md-12 col-lg-4 col-xl-2 px-0">
+            <div class="card-body ">
+              <div class="card-group text-center">
+                  
+                <div class="card col-md-12 col-lg-4 col-xl-2 px-0  border-dark">
+                  <div class="card-header font-weight-bold  weather border-dark">Aktuelle Temperatur</div>
+                  <div class="card-body ">
+                    <div class="icon "></div>
+                  </div>
+                </div>
+
+                <div class="card  col-md-12 col-lg-4 col-xl-2 px-0 border-dark">
+                  <div class="card-header font-weight-bold  border-dark">Aktuelle Temperatur</div>
+                  <div class="card-body "> 
+                    <div class="temp weatherFont"></div>
+                  </div>
+                </div>
+
+                <div class="card  col-md-12 col-lg-4 col-xl-2 px-0 border-dark">
+                  <div class="card-header font-weight-bold  border-dark">Gefühlt:</div>
+                  <div class="card-body ">
+                    <div class="feels weatherFont"></div>
+                  </div>
+                </div>
+
+                <div class="card  col-md-12 col-lg-4 col-xl-2 px-0 border-dark">
+                  <div class="card-header font-weight-bold  border-dark">Höchst/Tiefst Temperatur:</div>   
+                  <div class="card-body ">
+                    <div class="hi-low weatherFont"></div>
+                  </div>
+                </div>
+
+                <div class="card  col-md-12 col-lg-4 col-xl-2 px-0 border-dark">
+                  <div class="card-header font-weight-bold  border-dark">Luftfeuchtigkeit:</div>
+                  <div class="card-body ">
+                    <div class="humidity weatherFont"></div>
+                  </div>
+                </div>
+
+                <div class="card col-md-12 col-lg-4 col-xl-2 px-0 border-dark">
+                  <div class="card-header font-weight-bold  border-dark">Luftfeuchtigkeit:</div>
+                  <div class="card-body ">
+                    <div class="humidity weatherFont"></div>
+                  </div>
+              </div>
+              
+            </div>
+          </div>
+        
+      </div>
+    </div>
+
+    
+   
+    <script src="weather.js"></script>
+</body>
+</html>

@@ -1,74 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
-            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
 </head>
+
+
 <body onload="getResults()">
-    
 
-    <div class="container-fluid">
-      <div class="row py-5">
-          <div class="card col-md-12 col-lg-4 col-xl-2 px-0">
-            <div class="card-body ">
-              <div class="card-group text-center">
-                  
-                <div class="card col-md-12 col-lg-4 col-xl-2 px-0  border-dark">
-                  <div class="card-header font-weight-bold  weather border-dark">Aktuelle Temperatur</div>
-                  <div class="card-body ">
-                    <div class="icon "></div>
-                  </div>
-                </div>
+  <p class="d-block d-sm-none">xs</p>
+  <p class="d-none d-sm-block d-md-none">sm</p>
+  <p class="d-none d-md-block d-lg-none">md</p>
+  <p class="d-none d-lg-block d-xl-none">lg</p>
+  <p class="d-none d-xl-block">xl</p>
 
-                <div class="card  col-md-12 col-lg-4 col-xl-2 px-0 border-dark">
-                  <div class="card-header font-weight-bold  border-dark">Aktuelle Temperatur</div>
-                  <div class="card-body "> 
-                    <div class="temp weatherFont"></div>
-                  </div>
-                </div>
+  <div class="container-xl ">
+    <div class="row">
 
-                <div class="card  col-md-12 col-lg-4 col-xl-2 px-0 border-dark">
-                  <div class="card-header font-weight-bold  border-dark">Gefühlt:</div>
-                  <div class="card-body ">
-                    <div class="feels weatherFont"></div>
-                  </div>
-                </div>
+      <div class="card col-6 col-md-4 col-xl-2 px-0 ">
+        <div class="card-header font-weight-bold weather border-dark centerContent" style="height: 50px;">Aktuelle
+          Temperatur</div>
+        <div class="card-body centerContent">
+          <div class="icon "></div>
+        </div>
+      </div>
 
-                <div class="card  col-md-12 col-lg-4 col-xl-2 px-0 border-dark">
-                  <div class="card-header font-weight-bold  border-dark">Höchst/Tiefst Temperatur:</div>   
-                  <div class="card-body ">
-                    <div class="hi-low weatherFont"></div>
-                  </div>
-                </div>
+      <div class="card col-6  col-md-4 col-xl-2 px-0 ">
+        <div class="card-header font-weight-bold  border-dark centerContent" style="height: 50px;">Aktuelle Temperatur
+        </div>
+        <div class="card-body ">
+          <div class="temp weatherFont"></div>
+        </div>
+      </div>
 
-                <div class="card  col-md-12 col-lg-4 col-xl-2 px-0 border-dark">
-                  <div class="card-header font-weight-bold  border-dark">Luftfeuchtigkeit:</div>
-                  <div class="card-body ">
-                    <div class="humidity weatherFont"></div>
-                  </div>
-                </div>
+      <div class="card col-6 col-md-4 col-xl-2 px-0 ">
+        <div class="card-header font-weight-bold  border-dark centerContent" style="height: 50px;">Gefühlt:</div>
+        <div class="card-body ">
+          <div class="feels weatherFont"></div>
+        </div>
+      </div>
 
-                <div class="card col-md-12 col-lg-4 col-xl-2 px-0 border-dark">
-                  <div class="card-header font-weight-bold  border-dark">Luftfeuchtigkeit:</div>
-                  <div class="card-body ">
-                    <div class="humidity weatherFont"></div>
-                  </div>
-              </div>
-              
-            </div>
-          </div>
-        
+      <div class="card col-6 col-md-4 col-xl-2 px-0 ">
+        <div class="card-header font-weight-bold border-dark centerContent" style="height: 50px;">Höchst/Tiefst
+          Temperatur:</div>
+        <div class="card-body ">
+          <div class="hi-low weatherFont"></div>
+        </div>
+      </div>
+
+      <div class="card col-6 col-md-4 col-xl-2 px-0 ">
+        <div class="card-header font-weight-bold  border-dark centerContent" style="height: 50px;">Luftfeuchtigkeit:
+        </div>
+        <div class="card-body ">
+          <div class="humidity weatherFont"></div>
+        </div>
+      </div>
+
+      <div class="card col-6 col-md-4 col-xl-2 px-0 ">
+        <div class="card-header font-weight-bold  border-dark centerContent" style="height: 50px;">Luftfeuchtigkeit:
+        </div>
+        <div class="card-body ">
+          <div class="humidity weatherFont"></div>
+        </div>
       </div>
     </div>
 
-    
-   
-    <script src="weather.js"></script>
+
+    <div class="row">
+
+      <div class="card col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
+        <div class="card-header font-weight-bold weather border-dark centerContent" id="dailyHeaderSlot1"
+          style="height: 50px;">
+        </div>
+        <div class="card-body  float-left px-0 text-center">
+          <div id="iconSlot1"></div>
+          <div id="bodySlot1"></div>
+        </div>
+      </div>
+
+      <div class="card col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
+        <div class="card-header font-weight-bold  border-dark centerContent" id="dailyHeaderSlot2" style="height: 50px;">
+        </div>
+        <div class="card-body float-left px-0 text-center">
+          <div id="iconSlot2"></div>
+          <div id="bodySlot2"></div>
+        </div>
+      </div>
+
+      <div class="card col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
+        <div class="card-header font-weight-bold  border-dark centerContent" id="dailyHeaderSlot3" style="height: 50px;">
+        </div>
+        <div class="card-body float-left px-0 text-center">
+          <div id="iconSlot3"></div>
+          <div id="bodySlot3"></div>
+        </div>
+      </div>
+
+      <div class="card col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
+        <div class="card-header font-weight-bold border-dark centerContent" id="dailyHeaderSlot4" style="height: 50px;">
+        </div>
+        <div class="card-body float-left px-0 text-center">
+          <div id="iconSlot4"></div>
+          <div id="bodySlot4"></div>
+        </div>
+      </div>
+
+      <div class="card col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
+        <div class="card-header font-weight-bold  border-dark centerContent" id="dailyHeaderSlot5" style="height: 50px;">
+        </div>
+        <div class="card-body  float-left px-0 text-center">
+          <div id="iconSlot5"></div>
+          <div id="bodySlot5"></div>
+        </div>
+      </div>
+
+      <div class="card col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
+        <div class="card-header font-weight-bold  border-dark centerContent" id="dailyHeaderSlot6" style="height: 50px;">
+        </div>
+        <div class="card-body  float-left px-0 text-center">
+          <div id="iconSlot6"></div>
+          <div id="bodySlot6"></div>
+        </div>
+      </div>
+
+
+
+
+      <div class="card col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
+        <div class="card-header font-weight-bold weather border-dark centerContent" id="hourlyHeaderSlot1" style="height: 50px;">
+        </div>
+        <div class="card-body  float-left px-0 text-center">
+          <div id="hourlyIconSlot1"></div>
+          <div id="hourlyBodySlot1"></div>
+        </div>
+      </div>
+
+      <div class="card col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
+        <div class="card-header font-weight-bold  border-dark centerContent" id="hourlyHeaderSlot2" style="height: 50px;">
+        </div>
+        <div class="card-body  float-left px-0 text-center">
+          <div id="hourlyIconSlot2"></div>
+          <div id="hourlyBodySlot2"></div>
+        </div>
+      </div>
+
+      <div class="card col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
+        <div class="card-header font-weight-bold  border-dark centerContent" id="hourlyHeaderSlot3" style="height: 50px;"></div>
+        <div class="card-body  float-left px-0 text-center">
+          <div id="hourlyIconSlot3"></div>
+          <div id="hourlyBodySlot3"></div>
+        </div>
+      </div>
+
+      <div class="card col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
+        <div class="card-header font-weight-bold border-dark centerContent" id="hourlyHeaderSlot4" style="height: 50px;">
+        </div>
+        <div class="card-body  float-left px-0 text-center">
+          <div id="hourlyIconSlot4"></div>
+          <div id="hourlyBodySlot4"></div>
+        </div>
+      </div>
+
+      <div class="card col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
+        <div class="card-header font-weight-bold  border-dark centerContent" id="hourlyHeaderSlot5" style="height: 50px;">
+        </div>
+        <div class="card-body  float-left px-0 text-center">
+          <div id="hourlyIconSlot5"></div>
+          <div id="hourlyBodySlot5"></div>
+        </div>
+      </div>
+
+      <div class="card col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
+        <div class="card-header font-weight-bold  border-dark centerContent" id="hourlyHeaderSlot6" style="height: 50px;">
+        </div>
+        <div class="card-body  float-left px-0 text-center">
+          <div id="hourlyIconSlot6"></div>
+          <div id="hourlyBodySlot6"></div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+  <script src="weather.js"></script>
 </body>
+
 </html>
