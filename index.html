@@ -11,7 +11,7 @@
 </head>
 
 
-<body onload="getResults()">
+<body onload="getResults()" class="bg-secondary">
 
   <p class="d-block d-sm-none">xs</p>
   <p class="d-none d-sm-block d-md-none">sm</p>
@@ -19,28 +19,28 @@
   <p class="d-none d-lg-block d-xl-none">lg</p>
   <p class="d-none d-xl-block">xl</p>
 
-  <div class="container-xl ">
+  <div class="container-xl">
     <div class="row">
 
-      <div class="card col-6 col-md-4 col-xl-2 px-0 ">
-        <div class="card-header font-weight-bold weather border-dark centerContent" style="height: 50px;">Aktuelle
+      <div class="card col-6 col-md-4 col-xl-2 px-0">
+        <div class="card-header font-weight-bold weather border-dark centerContent px-0" style="height: 50px;">Aktuelle
           Temperatur</div>
-        <div class="card-body centerContent">
+        <div class="card-body centerContent " style="height: 90px">
           <div class="icon "></div>
         </div>
       </div>
 
       <div class="card col-6  col-md-4 col-xl-2 px-0 ">
-        <div class="card-header font-weight-bold  border-dark centerContent" style="height: 50px;">Aktuelle Temperatur
+        <div class="card-header font-weight-bold  border-dark centerContent px-0" style="height: 50px;">Aktuelle Temperatur:
         </div>
-        <div class="card-body ">
+        <div class="card-body " style="height: 90px">
           <div class="temp weatherFont"></div>
         </div>
       </div>
 
       <div class="card col-6 col-md-4 col-xl-2 px-0 ">
         <div class="card-header font-weight-bold  border-dark centerContent" style="height: 50px;">Gefühlt:</div>
-        <div class="card-body ">
+        <div class="card-body " style="height: 90px">
           <div class="feels weatherFont"></div>
         </div>
       </div>
@@ -48,7 +48,7 @@
       <div class="card col-6 col-md-4 col-xl-2 px-0 ">
         <div class="card-header font-weight-bold border-dark centerContent" style="height: 50px;">Höchst/Tiefst
           Temperatur:</div>
-        <div class="card-body ">
+        <div class="card-body " style="height: 90px">
           <div class="hi-low weatherFont"></div>
         </div>
       </div>
@@ -56,15 +56,15 @@
       <div class="card col-6 col-md-4 col-xl-2 px-0 ">
         <div class="card-header font-weight-bold  border-dark centerContent" style="height: 50px;">Luftfeuchtigkeit:
         </div>
-        <div class="card-body ">
+        <div class="card-body " style="height: 90px">
           <div class="humidity weatherFont"></div>
         </div>
       </div>
 
       <div class="card col-6 col-md-4 col-xl-2 px-0 ">
-        <div class="card-header font-weight-bold  border-dark centerContent" style="height: 50px;">Windgeschwindigkeit
+        <div class="card-header font-weight-bold  border-dark centerContent" style="height: 50px;">Windgeschwindigkeit:
         </div>
-        <div class="card-body ">
+        <div class="card-body " style="height: 90px">
           <div class="windSpeed weatherFont"></div>
         </div>
       </div>
@@ -73,7 +73,7 @@
 
     <div class="row">
 
-      <div class="card col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
+      <div class="card col-4 col-md-2 col-lg-2 col-xl-1 px-0">
         <div class="card-header font-weight-bold weather border-dark centerContent" id="dailyHeaderSlot1"
           style="height: 50px;">
         </div>
@@ -119,10 +119,10 @@
         </div>
       </div>
 
-      <div class="card col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
+      <div class="card col-4 col-md-2 col-lg-2 col-xl-1 px-0">
         <div class="card-header font-weight-bold  border-dark centerContent" id="dailyHeaderSlot6" style="height: 50px;">
         </div>
-        <div class="card-body  float-left px-0 text-center">
+        <div class="card-body  float-left px-0 text-center ">
           <div id="iconSlot6"></div>
           <div id="bodySlot6"></div>
         </div>

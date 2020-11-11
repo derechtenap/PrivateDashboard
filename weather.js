@@ -51,16 +51,16 @@ function displayResults(weatherCurrent) {
   weather_el.innerText = weatherCurrent.weather[0].description;
 
   let feels = document.querySelector('.feels');
-  feels.innerText = `${Math.round(weatherCurrent.main.feels_like)} °C`;
+  feels.innerText = `${Math.round(weatherCurrent.main.feels_like)}°C`;
 
   let hilow = document.querySelector('.hi-low');
   hilow.innerText = `${Math.round(weatherCurrent.main.temp_max)}°C / ${Math.round(weatherCurrent.main.temp_min)}°C`;
 
   let hum = document.querySelector('.humidity');
-  hum.innerText = `${weatherCurrent.main.humidity} %`;
+  hum.innerText = `${weatherCurrent.main.humidity}%`;
 
   let windSpeed = document.querySelector('.windSpeed');
-  windSpeed.innerText = `${weatherCurrent.wind.speed} m/s`;
+  windSpeed.innerText = `${weatherCurrent.wind.speed}m/s`;
 
 }
 
@@ -127,7 +127,7 @@ function dailyForecast(weather) {
     iconElement.innerHTML = "<img src=weatherIcons/" + weather.daily[i].weather[0].icon + "@2x.png>";
 
     var tempElement = document.getElementById("bodySlot" + (i+1));
-    tempElement.innerText = `${Math.round(weather.daily[i].temp.day)}°C`;
+    tempElement.innerText = `${Math.round(weather.daily[i].temp.day)}°C / ${Math.round(weather.daily[i].temp.night)}°C`;
 
   }
 }
