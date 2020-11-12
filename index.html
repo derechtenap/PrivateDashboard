@@ -72,18 +72,22 @@
       </div>
     </div>
 
-
     <div class="row">
 
       <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0">
-        <div class="card-header font-weight-bold weather border-dark centerContent" id="dailyHeaderSlot1"
-          style="height: 50px;">
+        <div class="card-header font-weight-bold border-dark centerContent" id="dailyHeaderSlot1" style="height: 50px;">
         </div>
+
+        <!-- Float könnte eigentlich entfernt werden... Wofür wolltest du das nutzen? -->
         <div class="card-body float-left px-0 text-center">
           <div id="iconSlot1"></div>
           <div id="bodySlot1"></div>
         </div>
+        <!-- Streched Link über die gesamte Card -->
+        <a class="stretched-link" data-toggle="collapse" href="#collapseFr" role="button" aria-expanded="false"
+          aria-controls="collapseFr"></a>
       </div>
+
 
       <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
         <div class="card-header font-weight-bold border-dark centerContent" id="dailyHeaderSlot2" style="height: 50px;">
@@ -92,7 +96,11 @@
           <div id="iconSlot2"></div>
           <div id="bodySlot2"></div>
         </div>
+        <!-- Streched Link über die gesamte Card -->
+        <a class="stretched-link" data-toggle="collapse" href="#collapseSa" role="button" aria-expanded="false"
+          aria-controls="collapseSa"></a>
       </div>
+
 
       <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
         <div class="card-header font-weight-bold border-dark centerContent" id="dailyHeaderSlot3" style="height: 50px;">
@@ -129,9 +137,6 @@
           <div id="bodySlot6"></div>
         </div>
       </div>
-
-
-
 
       <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0">
         <div class="card-header font-weight-bold weather border-dark centerContent" id="hourlyHeaderSlot1"
@@ -192,6 +197,57 @@
         </div>
       </div>
 
+    </div>
+
+    <!-- Hier der Inhalt des Collapse -->
+    <!-- ID benutzen um den Tag zu definieren -->
+
+    <!-- Aktuell können gleichzeitig Collapse benutzt werden. Die werden dann gestacked -->
+    <!-- https://stackoverflow.com/questions/37753407/bootstrap-collapse-how-to-expand-only-one-div-at-a-time -->
+    <div class="collapse mx-0 px-0" id="collapseFr">
+      <div class="card card-body rounded-0">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
+            Temp Day Night
+            <var class="font-weight-normal">0°</var>
+          </li>
+          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
+            Temp Day Night
+            <var class="font-weight-normal">0°</var>
+          </li>
+          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
+            Temp Day Night
+            <var class="font-weight-normal">0°</var>
+          </li>
+          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
+            Temp Day Night
+            <var class="font-weight-normal">0°</var>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="collapse mx-0 px-0" id="collapseSa">
+      <div class="card card-body rounded-0">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
+            Temp Day Night
+            <var class="font-weight-normal">0°</var>
+          </li>
+          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
+            Temp Day Night
+            <var class="font-weight-normal">0°</var>
+          </li>
+          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
+            Temp Day Night
+            <var class="font-weight-normal">0°</var>
+          </li>
+          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
+            Temp Day Night
+            <var class="font-weight-normal">0°</var>
+          </li>
+        </ul>
+      </div>
     </div>
 
   </div>
