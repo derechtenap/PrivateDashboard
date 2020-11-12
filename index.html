@@ -199,58 +199,69 @@
 
     </div>
 
-    <!-- Hier der Inhalt des Collapse -->
-    <!-- ID benutzen um den Tag zu definieren -->
+    <!-- Zusätzliche Row mit Col löst das Padding Problem -->
+    <!-- Der ausgeklappte Inhalt hat nun auch die selbe Bereite wie die anderen Cards -->
+    <div class="row">
+      <div class="col px-0">
 
-    <!-- Aktuell können gleichzeitig Collapse benutzt werden. Die werden dann gestacked -->
-    <!-- https://stackoverflow.com/questions/37753407/bootstrap-collapse-how-to-expand-only-one-div-at-a-time -->
-    <div class="collapse mx-0 px-0" id="collapseFr">
-      <div class="card card-body rounded-0">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
-            Temp Day Night
-            <var class="font-weight-normal">0°</var>
-          </li>
-          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
-            Temp Day Night
-            <var class="font-weight-normal">0°</var>
-          </li>
-          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
-            Temp Day Night
-            <var class="font-weight-normal">0°</var>
-          </li>
-          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
-            Temp Day Night
-            <var class="font-weight-normal">0°</var>
-          </li>
-        </ul>
+        <!-- Hier der Inhalt des Collapse -->
+        <!-- ID benutzen um den Tag zu definieren -->
+
+        <!-- Aktuell können gleichzeitig Collapse benutzt werden. Die werden dann gestacked -->
+        <!-- https://stackoverflow.com/questions/37753407/bootstrap-collapse-how-to-expand-only-one-div-at-a-time -->
+
+
+        <!-- COLLAPSE FR  -->
+        <div class="collapse" id="collapseFr">
+          <div class="card card-body rounded-0">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
+                Temp Day Night
+                <var class="font-weight-normal">0°</var>
+              </li>
+              <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
+                Temp Day Night
+                <var class="font-weight-normal">0°</var>
+              </li>
+              <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
+                Temp Day Night
+                <var class="font-weight-normal">0°</var>
+              </li>
+              <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
+                Temp Day Night
+                <var class="font-weight-normal">0°</var>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- COLLAPSE SA -->
+        <div class="collapse" id="collapseSa">
+          <div class="card card-body rounded-0">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
+                Temp Day Night
+                <var class="font-weight-normal">0°</var>
+              </li>
+              <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
+                Temp Day Night
+                <var class="font-weight-normal">0°</var>
+              </li>
+              <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
+                Temp Day Night
+                <var class="font-weight-normal">0°</var>
+              </li>
+              <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
+                Temp Day Night
+                <var class="font-weight-normal">0°</var>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="collapse mx-0 px-0" id="collapseSa">
-      <div class="card card-body rounded-0">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
-            Temp Day Night
-            <var class="font-weight-normal">0°</var>
-          </li>
-          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
-            Temp Day Night
-            <var class="font-weight-normal">0°</var>
-          </li>
-          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
-            Temp Day Night
-            <var class="font-weight-normal">0°</var>
-          </li>
-          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
-            Temp Day Night
-            <var class="font-weight-normal">0°</var>
-          </li>
-        </ul>
-      </div>
-    </div>
-
   </div>
+
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
