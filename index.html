@@ -84,8 +84,9 @@
           <div id="bodySlot1"></div>
         </div>
         <!-- Streched Link über die gesamte Card -->
-        <a class="stretched-link" data-toggle="collapse" href="#collapseFr" role="button" aria-expanded="false"
-          aria-controls="collapseFr"></a>
+        <!-- .collapse-link -> Siehe collapse.js: Versteckt alle anderen geöffneten Inhalte  -->
+        <a class="stretched-link collapse-link" data-toggle="collapse" href="#collapseFr" role="button"
+          aria-expanded="false" aria-controls="collapseFr"></a>
       </div>
 
 
@@ -96,9 +97,8 @@
           <div id="iconSlot2"></div>
           <div id="bodySlot2"></div>
         </div>
-        <!-- Streched Link über die gesamte Card -->
-        <a class="stretched-link" data-toggle="collapse" href="#collapseSa" role="button" aria-expanded="false"
-          aria-controls="collapseSa"></a>
+        <a class="stretched-link collapse-link" data-toggle="collapse" href="#collapseSa" role="button"
+          aria-expanded="false" aria-controls="collapseSa"></a>
       </div>
 
 
@@ -260,8 +260,8 @@
         </div>
       </div>
     </div>
-  </div>
 
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -273,6 +273,7 @@
     integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
   </script>
   <script src="weather.js"></script>
+  <script src="collapse.js"></script>
 </body>
 
 </html>
