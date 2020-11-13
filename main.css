@@ -1,5 +1,16 @@
+/* Farben */
+:root {
+    --dark: #212529;
+    --grey: #343A40;
+    --white: #DEE2E6;
+    --gradient-primary: #66101F;
+    --gradient-secondary: #114B5F;
+    --primary: #05668d;
+    --secondary: #DE6E4B;
+}
+
 .borderWeatherFull {
-    border-style:solid; 
+    border-style: solid;
     border-radius: 20px;
 }
 
@@ -8,7 +19,7 @@
 }
 
 .weatherFont {
-    font-size: 30px; 
+    font-size: 30px;
     text-align: center;
 }
 
@@ -18,8 +29,31 @@
 }
 
 .centerContent {
-    display: flex!important;
-    justify-content: center!important;
-    align-items: center!important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
 
+/* Color Theme ------------------------------------------------------------------------------------------- */
+
+.bg-gradient {
+    min-height: 100vh;
+
+    /* Fallback */
+    background: #66101f;
+    /* Gradients */
+    background: -webkit-linear-gradient(to top right, var(--gradient-secondary), var(--gradient-primary));
+    background: linear-gradient(to top right, var(--gradient-secondary), var(--gradient-primary));
+}
+
+.text-theme-white {
+    color: var(--white);
+}
+
+.bg-theme-grey {
+    background-color: var(--grey);
+}
+
+.bg-theme-dark {
+    background-color: var(--dark);
 }
