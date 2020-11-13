@@ -11,7 +11,7 @@
 </head>
 
 
-<body onload="getResults()" class="bg-secondary">
+<body onload="getResults()" class="bg-gradient">
 
   <p class="d-block d-sm-none">xs</p>
   <p class="d-none d-sm-block d-md-none">sm</p>
@@ -20,18 +20,21 @@
   <p class="d-none d-xl-block">xl</p>
 
   <div class="container-xl">
-    <div class="row">
+    <div class="row text-theme-white">
 
-      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0">
-        <div class="card-header font-weight-bold weather border-dark centerContent px-0" style="height: 50px;">Aktuelle
-          Temperatur</div>
+      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold weather centerContent px-0 bg-theme-dark rounded-0"
+          style="height: 50px;">
+          Aktuelle Temperatur
+        </div>
         <div class="card-body centerContent" style="height: 90px">
           <div class="icon"></div>
         </div>
       </div>
 
-      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 ">
-        <div class="card-header font-weight-bold  border-dark centerContent px-0" style="height: 50px;">Aktuelle
+      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold border-dark centerContent px-0 bg-theme-dark rounded-0"
+          style="height: 50px;">Aktuelle
           Temperatur:
         </div>
         <div class="card-body" style="height: 90px">
@@ -39,15 +42,17 @@
         </div>
       </div>
 
-      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 ">
-        <div class="card-header font-weight-bold  border-dark centerContent" style="height: 50px;">Gefühlt:</div>
+      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold  border-dark centerContent bg-theme-dark rounded-0"
+          style="height: 50px;">Gefühlt:</div>
         <div class="card-body" style="height: 90px">
           <div class="feels weatherFont"></div>
         </div>
       </div>
 
-      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 ">
-        <div class="card-header font-weight-bold border-dark centerContent" style="height: 50px;">Höchst/Tiefst
+      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold border-dark centerContent bg-theme-dark rounded-0"
+          style="height: 50px;">Höchst/Tiefst
           Temperatur:
         </div>
         <div class="card-body" style="height: 90px">
@@ -55,16 +60,18 @@
         </div>
       </div>
 
-      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 ">
-        <div class="card-header font-weight-bold  border-dark centerContent" style="height: 50px;">Luftfeuchtigkeit:
+      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold  border-dark centerContent bg-theme-dark rounded-0"
+          style="height: 50px;">Luftfeuchtigkeit:
         </div>
         <div class="card-body" style="height: 90px">
           <div class="humidity weatherFont"></div>
         </div>
       </div>
 
-      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 ">
-        <div class="card-header font-weight-bold  border-dark centerContent" style="height: 50px;">Windgeschwindigkeit:
+      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold  border-dark centerContent bg-theme-dark rounded-0"
+          style="height: 50px;">Windgeschwindigkeit:
         </div>
         <div class="card-body" style="height: 90px">
           <div class="windSpeed weatherFont"></div>
@@ -72,10 +79,11 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row text-theme-white">
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0">
-        <div class="card-header font-weight-bold border-dark centerContent" id="dailyHeaderSlot1" style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold border-dark centerContent bg-theme-dark rounded-0"
+          id="dailyHeaderSlot1" style="height: 50px;">
         </div>
 
         <!-- Float könnte eigentlich entfernt werden... Wofür wolltest du das nutzen? -->
@@ -90,8 +98,9 @@
       </div>
 
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
-        <div class="card-header font-weight-bold border-dark centerContent" id="dailyHeaderSlot2" style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold border-dark centerContent bg-theme-dark rounded-0"
+          id="dailyHeaderSlot2" style="height: 50px;">
         </div>
         <div class="card-body float-left px-0 text-center">
           <div id="iconSlot2"></div>
@@ -102,8 +111,9 @@
       </div>
 
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
-        <div class="card-header font-weight-bold border-dark centerContent" id="dailyHeaderSlot3" style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold border-dark centerContent bg-theme-dark rounded-0"
+          id="dailyHeaderSlot3" style="height: 50px;">
         </div>
         <div class="card-body float-left px-0 text-center">
           <div id="iconSlot3"></div>
@@ -111,8 +121,9 @@
         </div>
       </div>
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
-        <div class="card-header font-weight-bold border-dark centerContent" id="dailyHeaderSlot4" style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold border-dark centerContent bg-theme-dark rounded-0"
+          id="dailyHeaderSlot4" style="height: 50px;">
         </div>
         <div class="card-body float-left px-0 text-center">
           <div id="iconSlot4"></div>
@@ -120,8 +131,9 @@
         </div>
       </div>
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
-        <div class="card-header font-weight-bold border-dark centerContent" id="dailyHeaderSlot5" style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold border-dark centerContent bg-theme-dark rounded-0"
+          id="dailyHeaderSlot5" style="height: 50px;">
         </div>
         <div class="card-body  float-left px-0 text-center">
           <div id="iconSlot5"></div>
@@ -129,8 +141,9 @@
         </div>
       </div>
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0">
-        <div class="card-header font-weight-bold border-dark centerContent" id="dailyHeaderSlot6" style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold border-dark centerContent bg-theme-dark rounded-0"
+          id="dailyHeaderSlot6" style="height: 50px;">
         </div>
         <div class="card-body float-left px-0 text-center">
           <div id="iconSlot6"></div>
@@ -138,9 +151,9 @@
         </div>
       </div>
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0">
-        <div class="card-header font-weight-bold weather border-dark centerContent" id="hourlyHeaderSlot1"
-          style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold weather border-dark centerContent bg-theme-dark rounded-0"
+          id="hourlyHeaderSlot1" style="height: 50px;">
         </div>
         <div class="card-body float-left px-0 text-center">
           <div id="hourlyIconSlot1"></div>
@@ -148,9 +161,9 @@
         </div>
       </div>
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0">
-        <div class="card-header font-weight-bold  border-dark centerContent" id="hourlyHeaderSlot2"
-          style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold  border-dark centerContent bg-theme-dark rounded-0"
+          id="hourlyHeaderSlot2" style="height: 50px;">
         </div>
         <div class="card-body float-left px-0 text-center">
           <div id="hourlyIconSlot2"></div>
@@ -158,18 +171,18 @@
         </div>
       </div>
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0">
-        <div class="card-header font-weight-bold  border-dark centerContent" id="hourlyHeaderSlot3"
-          style="height: 50px;"></div>
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold  border-dark centerContent bg-theme-dark rounded-0"
+          id="hourlyHeaderSlot3" style="height: 50px;"></div>
         <div class="card-body float-left px-0 text-center">
           <div id="hourlyIconSlot3"></div>
           <div id="hourlyBodySlot3"></div>
         </div>
       </div>
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0">
-        <div class="card-header font-weight-bold border-dark centerContent" id="hourlyHeaderSlot4"
-          style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold border-dark centerContent bg-theme-dark rounded-0"
+          id="hourlyHeaderSlot4" style="height: 50px;">
         </div>
         <div class="card-body float-left px-0 text-center">
           <div id="hourlyIconSlot4"></div>
@@ -177,9 +190,9 @@
         </div>
       </div>
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0">
-        <div class="card-header font-weight-bold  border-dark centerContent" id="hourlyHeaderSlot5"
-          style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold  border-dark centerContent bg-theme-dark rounded-0"
+          id="hourlyHeaderSlot5" style="height: 50px;">
         </div>
         <div class="card-body float-left px-0 text-center">
           <div id="hourlyIconSlot5"></div>
@@ -187,9 +200,9 @@
         </div>
       </div>
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0">
-        <div class="card-header font-weight-bold  border-dark centerContent" id="hourlyHeaderSlot6"
-          style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold  border-dark centerContent bg-theme-dark rounded-0"
+          id="hourlyHeaderSlot6" style="height: 50px;">
         </div>
         <div class="card-body float-left px-0 text-center">
           <div id="hourlyIconSlot6"></div>
