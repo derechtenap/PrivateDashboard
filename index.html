@@ -11,43 +11,52 @@
 </head>
 
 
-<body onload="getResults()" class="bg-secondary">
+<body onload="getResults()" class="bg-gradient my-5">
+
+  <!-- 
+  TODO: Der Code kann eigentlich entfernt werden
 
   <p class="d-block d-sm-none">xs</p>
   <p class="d-none d-sm-block d-md-none">sm</p>
   <p class="d-none d-md-block d-lg-none">md</p>
   <p class="d-none d-lg-block d-xl-none">lg</p>
   <p class="d-none d-xl-block">xl</p>
+  -->
 
   <div class="container-xl">
-    <div class="row">
+    <div class="row text-theme-white">
 
-      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0">
-        <div class="card-header font-weight-bold weather border-dark centerContent px-0" style="height: 50px;">Aktuelle
-          Temperatur</div>
+      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold border-dark centerContent px-0 bg-theme-dark rounded-0 weather"
+          style="height: 50px;">
+          Bedingung
+        </div>
         <div class="card-body centerContent" style="height: 90px">
           <div class="icon"></div>
         </div>
       </div>
 
-      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 ">
-        <div class="card-header font-weight-bold  border-dark centerContent px-0" style="height: 50px;">Aktuelle
-          Temperatur:
+      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold border-dark centerContent px-0 bg-theme-dark rounded-0"
+          style="height: 50px;">
+          Aktuelle Temperatur:
         </div>
         <div class="card-body" style="height: 90px">
           <div class="temp weatherFont"></div>
         </div>
       </div>
 
-      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 ">
-        <div class="card-header font-weight-bold  border-dark centerContent" style="height: 50px;">Gefühlt:</div>
+      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold  border-dark centerContent bg-theme-dark rounded-0"
+          style="height: 50px;">Gefühlt:</div>
         <div class="card-body" style="height: 90px">
           <div class="feels weatherFont"></div>
         </div>
       </div>
 
-      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 ">
-        <div class="card-header font-weight-bold border-dark centerContent" style="height: 50px;">Höchst/Tiefst
+      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold border-dark centerContent bg-theme-dark rounded-0"
+          style="height: 50px;">Höchst/Tiefst
           Temperatur:
         </div>
         <div class="card-body" style="height: 90px">
@@ -55,16 +64,18 @@
         </div>
       </div>
 
-      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 ">
-        <div class="card-header font-weight-bold  border-dark centerContent" style="height: 50px;">Luftfeuchtigkeit:
+      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold  border-dark centerContent bg-theme-dark rounded-0"
+          style="height: 50px;">Luftfeuchtigkeit:
         </div>
         <div class="card-body" style="height: 90px">
           <div class="humidity weatherFont"></div>
         </div>
       </div>
 
-      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 ">
-        <div class="card-header font-weight-bold  border-dark centerContent" style="height: 50px;">Windgeschwindigkeit:
+      <div class="card rounded-0 col-6 col-md-4 col-xl-2 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold  border-dark centerContent bg-theme-dark rounded-0"
+          style="height: 50px;">Windgeschwindigkeit:
         </div>
         <div class="card-body" style="height: 90px">
           <div class="windSpeed weatherFont"></div>
@@ -72,10 +83,11 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row text-theme-white">
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0">
-        <div class="card-header font-weight-bold border-dark centerContent" id="dailyHeaderSlot1" style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold border-dark centerContent bg-theme-dark rounded-0"
+          id="dailyHeaderSlot1" style="height: 50px;">
         </div>
 
         <!-- Float könnte eigentlich entfernt werden... Wofür wolltest du das nutzen? -->
@@ -84,26 +96,28 @@
           <div id="bodySlot1"></div>
         </div>
         <!-- Streched Link über die gesamte Card -->
-        <a class="stretched-link" data-toggle="collapse" href="#collapseFr" role="button" aria-expanded="false"
-          aria-controls="collapseFr"></a>
+        <!-- .collapse-link -> Siehe collapse.js: Versteckt alle anderen geöffneten Inhalte  -->
+        <a class="stretched-link collapse-link" data-toggle="collapse" href="#collapseFr" role="button"
+          aria-expanded="false" aria-controls="collapseFr"></a>
       </div>
 
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
-        <div class="card-header font-weight-bold border-dark centerContent" id="dailyHeaderSlot2" style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold border-dark centerContent bg-theme-dark rounded-0"
+          id="dailyHeaderSlot2" style="height: 50px;">
         </div>
         <div class="card-body float-left px-0 text-center">
           <div id="iconSlot2"></div>
           <div id="bodySlot2"></div>
         </div>
-        <!-- Streched Link über die gesamte Card -->
-        <a class="stretched-link" data-toggle="collapse" href="#collapseSa" role="button" aria-expanded="false"
-          aria-controls="collapseSa"></a>
+        <a class="stretched-link collapse-link" data-toggle="collapse" href="#collapseSa" role="button"
+          aria-expanded="false" aria-controls="collapseSa"></a>
       </div>
 
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
-        <div class="card-header font-weight-bold border-dark centerContent" id="dailyHeaderSlot3" style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold border-dark centerContent bg-theme-dark rounded-0"
+          id="dailyHeaderSlot3" style="height: 50px;">
         </div>
         <div class="card-body float-left px-0 text-center">
           <div id="iconSlot3"></div>
@@ -111,8 +125,9 @@
         </div>
       </div>
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
-        <div class="card-header font-weight-bold border-dark centerContent" id="dailyHeaderSlot4" style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold border-dark centerContent bg-theme-dark rounded-0"
+          id="dailyHeaderSlot4" style="height: 50px;">
         </div>
         <div class="card-body float-left px-0 text-center">
           <div id="iconSlot4"></div>
@@ -120,8 +135,9 @@
         </div>
       </div>
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 ">
-        <div class="card-header font-weight-bold border-dark centerContent" id="dailyHeaderSlot5" style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold border-dark centerContent bg-theme-dark rounded-0"
+          id="dailyHeaderSlot5" style="height: 50px;">
         </div>
         <div class="card-body  float-left px-0 text-center">
           <div id="iconSlot5"></div>
@@ -129,8 +145,9 @@
         </div>
       </div>
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0">
-        <div class="card-header font-weight-bold border-dark centerContent" id="dailyHeaderSlot6" style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold border-dark centerContent bg-theme-dark rounded-0"
+          id="dailyHeaderSlot6" style="height: 50px;">
         </div>
         <div class="card-body float-left px-0 text-center">
           <div id="iconSlot6"></div>
@@ -138,9 +155,9 @@
         </div>
       </div>
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0">
-        <div class="card-header font-weight-bold weather border-dark centerContent" id="hourlyHeaderSlot1"
-          style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold weather border-dark centerContent bg-theme-dark rounded-0"
+          id="hourlyHeaderSlot1" style="height: 50px;">
         </div>
         <div class="card-body float-left px-0 text-center">
           <div id="hourlyIconSlot1"></div>
@@ -148,9 +165,9 @@
         </div>
       </div>
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0">
-        <div class="card-header font-weight-bold  border-dark centerContent" id="hourlyHeaderSlot2"
-          style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold  border-dark centerContent bg-theme-dark rounded-0"
+          id="hourlyHeaderSlot2" style="height: 50px;">
         </div>
         <div class="card-body float-left px-0 text-center">
           <div id="hourlyIconSlot2"></div>
@@ -158,18 +175,18 @@
         </div>
       </div>
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0">
-        <div class="card-header font-weight-bold  border-dark centerContent" id="hourlyHeaderSlot3"
-          style="height: 50px;"></div>
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold  border-dark centerContent bg-theme-dark rounded-0"
+          id="hourlyHeaderSlot3" style="height: 50px;"></div>
         <div class="card-body float-left px-0 text-center">
           <div id="hourlyIconSlot3"></div>
           <div id="hourlyBodySlot3"></div>
         </div>
       </div>
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0">
-        <div class="card-header font-weight-bold border-dark centerContent" id="hourlyHeaderSlot4"
-          style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold border-dark centerContent bg-theme-dark rounded-0"
+          id="hourlyHeaderSlot4" style="height: 50px;">
         </div>
         <div class="card-body float-left px-0 text-center">
           <div id="hourlyIconSlot4"></div>
@@ -177,9 +194,9 @@
         </div>
       </div>
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0">
-        <div class="card-header font-weight-bold  border-dark centerContent" id="hourlyHeaderSlot5"
-          style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold  border-dark centerContent bg-theme-dark rounded-0"
+          id="hourlyHeaderSlot5" style="height: 50px;">
         </div>
         <div class="card-body float-left px-0 text-center">
           <div id="hourlyIconSlot5"></div>
@@ -187,9 +204,9 @@
         </div>
       </div>
 
-      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0">
-        <div class="card-header font-weight-bold  border-dark centerContent" id="hourlyHeaderSlot6"
-          style="height: 50px;">
+      <div class="card rounded-0 col-4 col-md-2 col-lg-2 col-xl-1 px-0 bg-theme-grey border-0">
+        <div class="card-header font-weight-bold  border-dark centerContent bg-theme-dark rounded-0"
+          id="hourlyHeaderSlot6" style="height: 50px;">
         </div>
         <div class="card-body float-left px-0 text-center">
           <div id="hourlyIconSlot6"></div>
@@ -199,54 +216,65 @@
 
     </div>
 
-    <!-- Hier der Inhalt des Collapse -->
-    <!-- ID benutzen um den Tag zu definieren -->
+    <!-- Zusätzliche Row mit Col löst das Padding Problem -->
+    <!-- Der ausgeklappte Inhalt hat nun auch die selbe Bereite wie die anderen Cards -->
+    <div class="row">
+      <div class="col px-0">
 
-    <!-- Aktuell können gleichzeitig Collapse benutzt werden. Die werden dann gestacked -->
-    <!-- https://stackoverflow.com/questions/37753407/bootstrap-collapse-how-to-expand-only-one-div-at-a-time -->
-    <div class="collapse mx-0 px-0" id="collapseFr">
-      <div class="card card-body rounded-0">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
-            Temp Day Night
-            <var class="font-weight-normal">0°</var>
-          </li>
-          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
-            Temp Day Night
-            <var class="font-weight-normal">0°</var>
-          </li>
-          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
-            Temp Day Night
-            <var class="font-weight-normal">0°</var>
-          </li>
-          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
-            Temp Day Night
-            <var class="font-weight-normal">0°</var>
-          </li>
-        </ul>
-      </div>
-    </div>
+        <!-- Hier der Inhalt des Collapse -->
+        <!-- ID benutzen um den Tag zu definieren -->
 
-    <div class="collapse mx-0 px-0" id="collapseSa">
-      <div class="card card-body rounded-0">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
-            Temp Day Night
-            <var class="font-weight-normal">0°</var>
-          </li>
-          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
-            Temp Day Night
-            <var class="font-weight-normal">0°</var>
-          </li>
-          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
-            Temp Day Night
-            <var class="font-weight-normal">0°</var>
-          </li>
-          <li class="list-group-item d-inline-flex justify-content-between font-weight-bold">
-            Temp Day Night
-            <var class="font-weight-normal">0°</var>
-          </li>
-        </ul>
+        <!-- COLLAPSE FR  -->
+        <div class="collapse text-theme-white" id="collapseFr">
+          <div class="card card-body rounded-0 border-0 bg-theme-grey">
+            <ul class="list-group list-group-flush rounded-0">
+              <li
+                class="list-group-item d-inline-flex justify-content-between rounded-0 font-weight-bold bg-theme-dark">
+                Temp Day Night
+                <var class="font-weight-normal">0°</var>
+              </li>
+              <li class="list-group-item d-inline-flex justify-content-between font-weight-bold bg-theme-dark">
+                Temp Day Night
+                <var class="font-weight-normal">0°</var>
+              </li>
+              <li class="list-group-item d-inline-flex justify-content-between font-weight-bold bg-theme-dark">
+                Temp Day Night
+                <var class="font-weight-normal">0°</var>
+              </li>
+              <li
+                class="list-group-item d-inline-flex justify-content-between rounded-0 font-weight-bold bg-theme-dark">
+                Temp Day Night
+                <var class="font-weight-normal">0°</var>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- COLLAPSE SA -->
+        <div class="collapse text-theme-white" id="collapseSa">
+          <div class="card card-body rounded-0 border-0 bg-theme-grey">
+            <ul class="list-group list-group-flush">
+              <li
+                class="list-group-item d-inline-flex justify-content-between rounded-0 font-weight-bold bg-theme-dark">
+                Temp Day Night
+                <var class="font-weight-normal">0°</var>
+              </li>
+              <li class="list-group-item d-inline-flex justify-content-between font-weight-bold bg-theme-dark">
+                Temp Day Night
+                <var class="font-weight-normal">0°</var>
+              </li>
+              <li class="list-group-item d-inline-flex justify-content-between font-weight-bold bg-theme-dark">
+                Temp Day Night
+                <var class="font-weight-normal">0°</var>
+              </li>
+              <li
+                class="list-group-item d-inline-flex justify-content-between rounded-0 font-weight-bold bg-theme-dark">
+                Temp Day Night
+                <var class="font-weight-normal">0°</var>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -262,6 +290,7 @@
     integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
   </script>
   <script src="weather.js"></script>
+  <script src="collapse.js"></script>
 </body>
 
 </html>
