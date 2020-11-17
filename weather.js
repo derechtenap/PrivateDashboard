@@ -20,7 +20,7 @@ function getResults(query) {
       return weather.json();
     }).then(displayWeatherWidgetFull);
 
-    fetch(`${api.base}weather?lat=${api.lat}&lon=${api.long}&lang=de&units=metric&APPID=${api.key}`)
+  fetch(`${api.base}weather?lat=${api.lat}&lon=${api.long}&lang=de&units=metric&APPID=${api.key}`)
     .then(weatherCurrent => {
       return weatherCurrent.json();
     }).then(displayResults);
@@ -120,35 +120,72 @@ function unixToHour(UnixDay) {
 
 function dailyForecast(weather) {
   for (let i = 0; i < (weather.daily.length - 2); i++) {
-    var headerDay = document.getElementById("dailyHeaderSlot" + (i+1));
+    var headerDay = document.getElementById("dailyHeaderSlot" + (i + 1));
     headerDay.innerText = unixToDay(weather.daily[i].dt);
 
-    var iconElement = document.getElementById("iconSlot" + (i+1));
+    var iconElement = document.getElementById("iconSlot" + (i + 1));
     iconElement.innerHTML = "<img src=weatherIcons/" + weather.daily[i].weather[0].icon + "@2x.png>";
 
-    var tempElement = document.getElementById("bodySlot" + (i+1));
+    var tempElement = document.getElementById("bodySlot" + (i + 1));
     tempElement.innerText = `${Math.round(weather.daily[i].temp.day)}°C / ${Math.round(weather.daily[i].temp.night)}°C`;
 
   }
 }
 
+/*
+function detailedInfoDaily(weather) {
+
+  $('.btn-primary').click(function () {
+    $('.detailedArea').append(`<div class="collapse text-theme-white" id="collapseFr">
+    <div class="card card-body rounded-0 border-0 bg-theme-grey">
+      <ul class="list-group list-group-flush rounded-0">
+        <li
+          class="list-group-item d-inline-flex justify-content-between rounded-0 font-weight-bold bg-theme-dark">
+          Gefühlt:
+          <var class="font-weight-normal">0°</var>
+        </li>
+        <li class="list-group-item d-inline-flex justify-content-between font-weight-bold bg-theme-dark">
+          Höchst/Tiefst Temperatur:
+          <var class="font-weight-normal">0°</var>
+        </li>
+        <li class="list-group-item d-inline-flex justify-content-between font-weight-bold bg-theme-dark">
+          Luftfeuchtigkeit:
+          <var class="font-weight-normal">0°</var>
+        </li>
+        <li
+          class="list-group-item d-inline-flex justify-content-between rounded-0 font-weight-bold bg-theme-dark">
+          Windgeschwindigkeit:
+          <var class="font-weight-normal">0°</var>
+        </li>
+      </ul>
+    </div>
+  </div>`)
+  })
+
+}
+*/
+
+
+
+
 function hourlyForecast(weather) {
-  for (let i = 0; i < 6; i++){
-    var headerHourly = document.getElementById("hourlyHeaderSlot" + (i+1));
+  for (let i = 0; i < 6; i++) {
+    var headerHourly = document.getElementById("hourlyHeaderSlot" + (i + 1));
     headerHourly.innerText = unixToHour(weather.hourly[i].dt);
 
-    var iconElementHourly = document.getElementById("hourlyIconSlot" + (i+1));
+    var iconElementHourly = document.getElementById("hourlyIconSlot" + (i + 1));
     iconElementHourly.innerHTML = "<img src=weatherIcons/" + weather.hourly[i].weather[0].icon + "@2x.png>";
 
-    var tempElementHourly = document.getElementById("hourlyBodySlot" + (i+1));
+    var tempElementHourly = document.getElementById("hourlyBodySlot" + (i + 1));
     tempElementHourly.innerText = `${Math.round(weather.hourly[i].temp)}°C`;
   }
 
 }
 
 
-/*
-  fetch(`${api.base}onecall?q=${query}&units=metric&APPID=${api.key}`)
 
-
-  */
+// Immer wenn ein neuer Inhalt geöffnet wird,
+// werden alle anderen Inhalte versteckt...
+$(".collapse-link").on('click', function () {
+  $(".collapse").removeClass("show");
+});

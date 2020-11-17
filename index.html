@@ -60,7 +60,7 @@
           Temperatur:
         </div>
         <div class="card-body" style="height: 90px">
-          <div class="hi-low weatherFont"></div>
+          <div class="hi-low weatherFont" style="font-size: 28px;"></div>
         </div>
       </div>
 
@@ -219,7 +219,7 @@
     <!-- Zusätzliche Row mit Col löst das Padding Problem -->
     <!-- Der ausgeklappte Inhalt hat nun auch die selbe Bereite wie die anderen Cards -->
     <div class="row">
-      <div class="col px-0">
+      <div class="col px-0 detailedArea">
 
         <!-- Hier der Inhalt des Collapse -->
         <!-- ID benutzen um den Tag zu definieren -->
@@ -230,51 +230,27 @@
             <ul class="list-group list-group-flush rounded-0">
               <li
                 class="list-group-item d-inline-flex justify-content-between rounded-0 font-weight-bold bg-theme-dark">
-                Temp Day Night
+                Gefühlt:
                 <var class="font-weight-normal">0°</var>
               </li>
               <li class="list-group-item d-inline-flex justify-content-between font-weight-bold bg-theme-dark">
-                Temp Day Night
+                Höchst/Tiefst Temperatur:
                 <var class="font-weight-normal">0°</var>
               </li>
               <li class="list-group-item d-inline-flex justify-content-between font-weight-bold bg-theme-dark">
-                Temp Day Night
+                Luftfeuchtigkeit:
                 <var class="font-weight-normal">0°</var>
               </li>
               <li
                 class="list-group-item d-inline-flex justify-content-between rounded-0 font-weight-bold bg-theme-dark">
-                Temp Day Night
+                Windgeschwindigkeit:
                 <var class="font-weight-normal">0°</var>
               </li>
             </ul>
           </div>
         </div>
 
-        <!-- COLLAPSE SA -->
-        <div class="collapse text-theme-white" id="collapseSa">
-          <div class="card card-body rounded-0 border-0 bg-theme-grey">
-            <ul class="list-group list-group-flush">
-              <li
-                class="list-group-item d-inline-flex justify-content-between rounded-0 font-weight-bold bg-theme-dark">
-                Temp Day Night
-                <var class="font-weight-normal">0°</var>
-              </li>
-              <li class="list-group-item d-inline-flex justify-content-between font-weight-bold bg-theme-dark">
-                Temp Day Night
-                <var class="font-weight-normal">0°</var>
-              </li>
-              <li class="list-group-item d-inline-flex justify-content-between font-weight-bold bg-theme-dark">
-                Temp Day Night
-                <var class="font-weight-normal">0°</var>
-              </li>
-              <li
-                class="list-group-item d-inline-flex justify-content-between rounded-0 font-weight-bold bg-theme-dark">
-                Temp Day Night
-                <var class="font-weight-normal">0°</var>
-              </li>
-            </ul>
-          </div>
-        </div>
+
       </div>
     </div>
 
@@ -290,7 +266,6 @@
     integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
   </script>
   <script src="weather.js"></script>
-  <script src="collapse.js"></script>
 </body>
 
 </html>
